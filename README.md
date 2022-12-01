@@ -12,3 +12,13 @@ FEATURES:
 - Creating a comment on a blog post
 - Reading a comment on a blog post
 - Deleting a comment on a blog post
+
+USED LANGUAGES:
+- NODE.JS (Typescript)
+- MySQL
+
+FRAMEWORK:
+- Express
+
+TESTING APPLICATION:
+- Postman
