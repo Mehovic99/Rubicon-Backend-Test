@@ -5,12 +5,15 @@ const http = require('http');
 const hostname = '127.0.0.1';
 const port = 3000;
 
+//A message that will appear on the page that will prove if the program launched successfully
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('The backend is operational');
 });
 
+//A message that appers in the terminal that confirms the program was started
 server.listen(port, hostname, () => {
   console.log(`Server has been started. The app is running at http://${hostname}:${port}/`);
 });
+

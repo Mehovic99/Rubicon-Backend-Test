@@ -1,0 +1,26 @@
+{
+  "name": "Rubicon-Backend-Test",
+  "version": "1.0.0",
+  "description": "The RESTFUL API for a blog post type of application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mehovic99/Rubicon-Backend-Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mehovic99/Rubicon-Backend-Test/issues"
+  },
+  "homepage": "https://github.com/Mehovic99/Rubicon-Backend-Test#readme",
+  "dependencies": {
+    "axios": "^1.2.0",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.2"
+  }
+}
