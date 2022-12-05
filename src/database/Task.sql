@@ -1,3 +1,4 @@
+//This database code is present here in the case that you need to clone the database to your phpMyAdmin server
 /*
 SQLyog Community v13.1.9 (64 bit)
 MySQL - 10.4.25-MariaDB : Database - task
