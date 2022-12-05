@@ -17,3 +17,12 @@ server.listen(port, hostname, () => {
   console.log(`Server has been started. The app is running at http://${hostname}:${port}/`);
 });
 
+//Defining the required constants to connect to the datbase file
+const sqlite = require("sqlite3").verbose();
+const axios = require("axios");
+let sql;
+
+//Connecting to the database
+const db = new sqlite.Database("./database/Task.db", sqlite.OPEN_READWRITE, (err) => {
+  if (err) console.error(err);
+});
