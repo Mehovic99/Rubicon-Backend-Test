@@ -19,11 +19,15 @@ server.listen(port, hostname, () => {
 });
 
 //Defining the required constants to connect to the datbase file
-const sqlite = require("sqlite3").verbose();
-const axios = require("axios");
+const mysql = require('mysql');
 let sql;
 
 //Connecting to the database
-const db = new sqlite.Database("./database/Task.db", sqlite.OPEN_READWRITE, (err) => {
-  if (err) console.error(err);
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'root123',
+  database: 'task'
 });
+
+
