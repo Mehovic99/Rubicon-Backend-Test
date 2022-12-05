@@ -9,9 +9,9 @@ FEATURES:
 - Listing all blog posts by tags
 - Filtering all blog posts by tags
 - Listing all the tags available
-- Creating a comment on a blog post
-- Reading a comment on a blog post
-- Deleting a comment on a blog post
+- Creating a comment 
+- Reading a comment
+- Deleting a comment
 
 USED LANGUAGES:
 - NODE.JS (Typescript)
