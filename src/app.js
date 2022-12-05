@@ -2,7 +2,8 @@
 const http = require('http');
 
 //Defining the link on which the program will run
-const hostname = '127.0.0.1';
+//This part can also be done by using app.listen('3000'), which would also launch the program at localhost:3000.
+const hostname = 'localhost';
 const port = 3000;
 
 //A message that will appear on the page that will prove if the program launched successfully
