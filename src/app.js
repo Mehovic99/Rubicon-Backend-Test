@@ -1,4 +1,5 @@
 //Connecting to a local port in oreder to test the API using postman
+const { appendFile } = require('fs');
 const http = require('http');
 
 //Defining the link on which the program will run
@@ -22,7 +23,7 @@ server.listen(port, hostname, () => {
 const mysql = require('mysql');
 let sql;
 
-//Connecting to the database
+//Creating parameters for the connection
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -30,4 +31,17 @@ const db = mysql.createConnection({
   database: 'task'
 });
 
+//Connecting to the database
+db.connect((err) => {
+  if(err){
+    throw err;
+  }
+  console.log('Database connection successful');
+});
 
+//Testing database connection. Remove the '//' symbols from this command line in order to test whether the sql connection is successful
+//sql = 'SELECT * FROM posts';
+//let query = db.query(sql, (err, result) =>{
+  //if(err) throw err;
+  //console.log(result);
+//});
