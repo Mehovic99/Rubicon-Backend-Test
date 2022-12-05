@@ -26,9 +26,9 @@ let sql;
 //Creating parameters for the connection
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: 'root123',
-  database: 'task'
+  user: 'root', //Change the value if needed in order to match your credentials for the user
+  password: 'root123', //Change the value if needed in order to match your credentials for the password that user has setup
+  database: 'task' //If the database doesn't exist, there is a file called 'Task.sql' that you can run as a query on PhpMyAdmin in order to have the database and its data
 });
 
 //Connecting to the database
