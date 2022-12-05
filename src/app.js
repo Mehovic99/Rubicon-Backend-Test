@@ -1,5 +1,7 @@
+//Connecting to a local port in oreder to test the API using postman
 const http = require('http');
 
+//Defining the link on which the program will run
 const hostname = '127.0.0.1';
 const port = 3000;
 
