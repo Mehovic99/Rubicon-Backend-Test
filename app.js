@@ -1,6 +1,14 @@
+//Importing necessary componenets
+import express from 'express';
+import mysql from 'mysql';
+
 //Connecting to a local port in oreder to test the API using postman
 const { appendFile } = require('fs');
 const http = require('http');
+const app = express();
+
+//Body parsing necessary for processing http into json throguh express
+app.use(express.json());
 
 //Defining the link on which the program will run
 //This part can also be done by using app.listen('3000'), which would also launch the program at localhost:3000.
