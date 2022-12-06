@@ -95,3 +95,11 @@ After you click on the SQL tab, you insert the data into the query box
 After you press the button that starts the query, you will have a new database one the left hand side and a confirmation that the database was created.
 
 ![Picture 9](https://user-images.githubusercontent.com/76923830/205908936-2e4e4e24-24eb-4f8f-9d87-fa872ba9b67c.JPG)
+
+### STEP 4: Using Postman
+
+After you have enabled the database and tested to see if the application can run on your machine, you can open Postman in the application version as shown in the picture below
+
+
+
+Or it can be opened from a link ``` postman.com ```.
