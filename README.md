@@ -62,3 +62,34 @@ On a linux machine, you have to right click your repository folder and press the
 
 ![Picture 6](https://user-images.githubusercontent.com/76923830/205904445-44082d90-3541-4e76-8900-a40ca653033d.png)
 
+### STEP 3: Connecting the database
+
+If you can notice, the datbase connection for this project relies on the PhpMyAdmin localhost. Meaning that after you install PhpMyAdmin, you have to take your PhpMyAdmin credentials and replace the following lines of code with your credentials and under the following lines of code:
+```
+const db = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: 'root123',
+  database: 'task'
+})
+
+```
+You must replace the ``` user ``` and ``` password ``` in order for the connection to be established, otherwise the code with throw an error.
+
+### STEP 4: Creating the database
+
+In the repository, you can notice that there is a folder called database. It is located in:
+
+├── Repository Folder
+    ├── database
+        ├── Task.sql
+
+This sql file contains the entire database with its corresponding example data. You can copy all of the text by pressing ``` Ctrl + A ``` which will then select all the lines of code from the sql file. The sql file is one large query that after you copy it, you can go to PhpMyAdmin and select the section called ``` SQL ```
+
+
+
+After you click on the SQL tab, you insert the data into the query box
+
+
+
+After you press the button that starts the query, you will have a new database one the left hand side and a confirmation that the database was created.
