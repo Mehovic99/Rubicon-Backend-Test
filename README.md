@@ -100,6 +100,6 @@ After you press the button that starts the query, you will have a new database o
 
 After you have enabled the database and tested to see if the application can run on your machine, you can open Postman in the application version as shown in the picture below
 
+![Picture 10](https://user-images.githubusercontent.com/76923830/205910324-d3951a11-8c92-456e-8b6c-971c2e62c959.JPG)
 
-
-Or it can be opened from a link ``` postman.com ```.
+Or it can be opened from a link [Postman](https://postman.com).
