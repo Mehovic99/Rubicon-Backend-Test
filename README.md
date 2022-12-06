@@ -56,6 +56,9 @@ You can open Command Prompt on Windows (cmd) or A linux terminal on your Linux m
 
 EXAMPLE COMMAND PROMPT: In command prompt type in ``` cd "Path to your folder" ```, for example ```cd "C:\Users\pc\Desktop\Repository Folder" ```. After this line of code, once you are in the repository folder which houses the app.js, you run the line of code ``` node app.js ``` to start the program.
 
-
+![Picture 5](https://user-images.githubusercontent.com/76923830/205904425-bdf9cd78-af6a-4c23-b785-30bb3c591f55.JPG)
 
 On a linux machine, you have to right click your repository folder and press the command ``` Open in Terminal ```. After that just type in ``` node app.js ```.
+
+![Picture 6](https://user-images.githubusercontent.com/76923830/205904445-44082d90-3541-4e76-8900-a40ca653033d.png)
+
