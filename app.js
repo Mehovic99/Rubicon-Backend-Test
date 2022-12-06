@@ -1,8 +1,4 @@
-//Importing necessary componenets
-import express from 'express';
-import mysql from 'mysql';
-
-//Connecting to a local port in oreder to test the API using postman
+const express = require('express');
 const { appendFile } = require('fs');
 const http = require('http');
 const app = express();
@@ -46,7 +42,6 @@ db.connect((err) => {
   }
   console.log('Database connection successful');
 });
-
 //API SECTION
 
 //Get all blog posts
