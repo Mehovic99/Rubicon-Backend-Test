@@ -30,9 +30,19 @@ DATABASE APPLICATION:
 
 ## HOW TO RUN APPLICATION
 
-# STEP 1
+### STEP 1
 
 Clone the repository from github into the preffered IDE. All the packages and modules are present in the github repository so there is no need to install any packages
 
 ![Picture 1](https://user-images.githubusercontent.com/76923830/205899246-e063d210-4374-4810-820a-24aef862d9dd.JPG)
 ![Picture 2](https://user-images.githubusercontent.com/76923830/205899408-9ad180ab-51f7-4490-8556-aa22687e24e2.JPG)
+
+### STEP 2
+
+Once you have the cloned repository in your prefered ID. You can run the application in two ways:
+
+### OPTION 1: If you're using VS Code
+
+You can open a new terminal in visual studio code and type in ``` node app.js ```
+
+
