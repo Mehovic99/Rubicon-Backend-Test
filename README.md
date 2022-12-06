@@ -1,7 +1,7 @@
 # Rubicon-Backend-Test
 The RESTFUL API for a blog post type of application.
 
-FEATURES:
+## FEATURES:
 - Creating a blog post
 - Reading a blog post
 - Updating a blog post
@@ -24,7 +24,13 @@ TESTING APPLICATION:
 
 DOUCMENTATION TOOL/S:
 - Postman
-- Swagger
 
 DATABASE APPLICATION:
 - SQLyog
+
+## HOW TO RUN APPLICATION
+
+# STEP 1
+
+Clone the repository from github into the preffered IDE. All the packages and modules are present in the github repository so there is no need to install any packages
+
