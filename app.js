@@ -58,6 +58,52 @@ app.get('/api/posts/:slug', (req, res) => {
   });
 });
 
+// POST api/posts
+app.post('/api/posts', (req, res) => {
+  db.getConnection( (err, conn) => {
+       if(err) throw err
+       console.log(`connected as id ${conn.threadId}`)
+
+       const params =  req.body
+
+       conn.query('INSERT INTO posts (title, description, body, updated_at, created_at) VALUES (?, ?, ?, ?, ?);' , params , (err, rows) => {
+           conn.release() // return the connection to pool
+
+           if(!err){
+               res.send(`Post has been Added.`);
+           } else{
+               console.log(err);
+           }
+       });
+
+       console.log(req.body);
+  });
+});
+
+// PUT api/posts/:slug
+app.put('/api/posts/:slug', (req, res) => {
+  db.getConnection( (err, conn) => {
+       if(err) throw err
+       console.log(`connected as id ${conn.threadId}`)
+
+       const params =  req.body
+       const { id, title, body, description, updated_at, created_at } = req.body 
+
+       conn.query('UPDATE  posts SET title = ? , body = ?, description = ? WHERE slug = ?',
+        [title , body , description , updated_at, created_at, id] , (err , rows) => {
+           conn.release() // return the connection to pool
+
+           if(!err){
+               res.send(`Post ${params.slug } has been changed.`);
+           } else{
+               console.log(err);
+           }
+       });
+
+       console.log(req.body);
+  });
+});
+
 // DELETE api/posts/:slug
 app.delete('/api/posts/:slug', (req, res) => {
   db.getConnection( (err, conn) => {
