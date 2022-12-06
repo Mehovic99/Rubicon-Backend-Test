@@ -14,7 +14,7 @@ The RESTFUL API for a blog post type of application.
 - Deleting a comment
 
 USED LANGUAGES:
-- NODE.JS (Typescript)
+- NODE.JS
 
 DATABASE:
 - MySQL
