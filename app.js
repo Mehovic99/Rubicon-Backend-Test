@@ -1,56 +1,77 @@
+const bodyParser = require('body-parser');
 const express = require('express');
-const { appendFile } = require('fs');
-const http = require('http');
+const mysql = require('mysql');
+const {response} = require('express');
+
 const app = express();
 
-//Body parsing necessary for processing http into json throguh express
-app.use(express.json());
+const PORT = process.nextTick.PORT || 3000;
+app.use(bodyParser.urlencoded({extended : false}));
 
-//Defining the link on which the program will run
-//This part can also be done by using app.listen('3000'), which would also launch the program at localhost:3000.
-const hostname = 'localhost';
-const port = 3000;
+app.use(bodyParser.json());
 
-//A message that will appear on the page that will prove if the program launched successfully
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('The backend is operational');
-});
+//Listening on port
+app.listen(PORT, () => console.log(`Server running on ${PORT}`)); 
 
-//A message that appers in the terminal that confirms the program was started
-server.listen(port, hostname, () => {
-  console.log(`Server has been started. The app is running at http://${hostname}:${port}/`);
-});
-
-//Defining the required constants to connect to the datbase file
-const mysql = require('mysql');
-let sql;
-
-//Creating parameters for the connection
-const db = mysql.createConnection({
+//MySQL connection
+const db = mysql.createPool({
   host: 'localhost',
-  user: 'root', //Change the value if needed in order to match your credentials for the user
-  password: 'root123', //Change the value if needed in order to match your credentials for the password that user has setup
-  database: 'task' //If the database doesn't exist, there is a file called 'Task.sql' that you can run as a query on PhpMyAdmin in order to have the database and its data
+  user: 'root',
+  password: 'root123',
+  database: 'task'
+})
+
+//GET api/posts
+app.get('/api/posts', (req, res) => {
+  db.getConnection((err, conn) => {
+    if(err) throw err
+    console.log(`connected as id ${conn.threadId}`)
+
+    conn.query('SELECT * FROM posts', (err, rows) => {
+      conn.release() //returning connection back to the pool
+
+      if(!err){
+        res.send(rows);
+      }
+      else{
+        console.log(err);
+      }
+    });
+  });
 });
 
-//Connecting to the database
-db.connect((err) => {
-  if(err){
-    throw err;
-  }
-  console.log('Database connection successful');
-});
-//API SECTION
+// GET api/posts/:slug
+app.get('/api/posts/:slug', (req, res) => {
+  db.getConnection( (err, conn) => {
+       if(err) throw err
+       console.log(`connected as id ${conn.threadId}`)
 
-//Get all blog posts
-app.get('/api/posts', (req, res)=>{
-  let sql = 'SELECT * FROM posts';
-  db.query(sql, (err, results)=>{
-    if(err){
-      return res.status(500).json(err);
-    }
-    res.status(200).json(results);
+       conn.query('SELECT * FROM posts WHERE slug = ?' , [req.params.slug] , (err, rows) => {
+           conn.release() // return the connection to pool
+
+           if(!err){
+               res.send(rows);
+           } else{
+               console.log(err);
+           }
+       });
+  });
+});
+
+// DELETE api/posts/:slug
+app.delete('/api/posts/:slug', (req, res) => {
+  db.getConnection( (err, conn) => {
+       if(err) throw err
+       console.log(`connected as id ${conn.threadId}`)
+
+       conn.query('DELETE  FROM posts WHERE slug = ?' , [req.params.slug] , (err, rows) => {
+           conn.release() // return the connection to pool
+
+           if(!err){
+               res.send(`Post with the slug ${[req.params.slug] } has been removed.`);
+           } else{
+               console.log(err);
+           }
+       });
   });
 });

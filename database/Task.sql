@@ -1,4 +1,3 @@
-//This database code is present here in the case that you need to clone the database to your phpMyAdmin server
 /*
 SQLyog Community v13.1.9 (64 bit)
 MySQL - 10.4.25-MariaDB : Database - task
@@ -71,16 +70,17 @@ CREATE TABLE `posts` (
   `body` text DEFAULT NULL,
   `created_at` date DEFAULT NULL,
   `updated_at` date DEFAULT NULL,
+  `slug` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `posts` */
 
-insert  into `posts`(`id`,`title`,`description`,`body`,`created_at`,`updated_at`) values 
-(1,'Post Example Title 1','This is an example description of the post 1','This post is the post 1. Here is a random quote : \"Quality is not an act, it is a habit\"','2022-12-05','2022-12-05'),
-(2,'Post Example Title 2','This is an example description of the post 2','This post is the post 2. Here is a random quote : \"The only true wisdom is in knowing you know nothing.\"','2022-12-03','2022-12-03'),
-(3,'Post Example Title 3','This is an example description of the post 3\r\n','This post is the post 3. Here is a random quote : \"Out of difficulties grow miracles.\"','2022-12-02','2022-12-02'),
-(4,'Post Example Title 4','This is an example description of the post 4','This post is the post 4. Here is a random quote : \"Patience is bitter, but its fruit is sweet.\"','2022-11-30','2022-11-30');
+insert  into `posts`(`id`,`title`,`description`,`body`,`created_at`,`updated_at`,`slug`) values 
+(1,'Post Example Title 1','This is an example description of the post 1','This post is the post 1. Here is a random quote : \"Quality is not an act, it is a habit\"','2022-12-05','2022-12-05','post-example-title-1'),
+(2,'Post Example Title 2','This is an example description of the post 2','This post is the post 2. Here is a random quote : \"The only true wisdom is in knowing you know nothing.\"','2022-12-03','2022-12-03','post-example-title-2'),
+(3,'Post Example Title 3','This is an example description of the post 3\r\n','This post is the post 3. Here is a random quote : \"Out of difficulties grow miracles.\"','2022-12-02','2022-12-02','post-example-title-3'),
+(4,'Post Example Title 4','This is an example description of the post 4','This post is the post 4. Here is a random quote : \"Patience is bitter, but its fruit is sweet.\"','2022-11-30','2022-11-30','post-example-title-4');
 
 /*Table structure for table `tags` */
 
