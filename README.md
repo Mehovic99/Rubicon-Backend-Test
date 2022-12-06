@@ -30,6 +30,8 @@ DATABASE APPLICATION:
 
 ## HOW TO RUN APPLICATION
 
+### CAUTION: YOU MUST HAVE NODE INSTALLED ON YOUR MACHINE. WITHOUT IT, YOU CANNOT RUN THE JS FILE AS SPECIFIED BELOW
+### ----------------------------------------------------------------------------------------------------------------
 ### STEP 1
 
 Clone the repository from github into the preffered IDE. All the packages and modules are present in the github repository so there is no need to install any packages
@@ -55,3 +57,5 @@ You can open Command Prompt on Windows (cmd) or A linux terminal on your Linux m
 EXAMPLE COMMAND PROMPT: In command prompt type in ``` cd "Path to your folder" ```, for example ```cd "C:\Users\pc\Desktop\Repository Folder" ```. After this line of code, once you are in the repository folder which houses the app.js, you run the line of code ``` node app.js ``` to start the program.
 
 
+
+On a linux machine, you have to right click your repository folder and press the command ``` Open in Terminal ```. After that just type in ``` node app.js ```.
