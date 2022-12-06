@@ -50,4 +50,8 @@ You can open a new terminal in visual studio code and type in ``` node app.js ``
 
 ### OPTION 2: If you're using IDE that does not have an integrated terminal
 
-You can open Command Prompt on Windows (cmd) or A linux terminal on your Linux machine (Ctrl+Alt+T) in order to run the program. First you must navigate to your cloned repository folder
+You can open Command Prompt on Windows (cmd) or A linux terminal on your Linux machine (Ctrl+Alt+T) in order to run the program. First you must navigate to your cloned repository folder.
+
+EXAMPLE COMMAND PROMPT: In command prompt type in ``` cd "Path to your folder" ```, for example ```cd "C:\Users\pc\Desktop\Repository Folder" ```. After this line of code, once you are in the repository folder which houses the app.js, you run the line of code ``` node app.js ``` to start the program.
+
+
