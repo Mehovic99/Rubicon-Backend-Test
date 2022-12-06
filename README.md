@@ -28,6 +28,9 @@ DOUCMENTATION TOOL/S:
 DATABASE APPLICATION:
 - SQLyog
 
+## At the bottom of the readme.md file are the current known errors and issues with the application
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 ## HOW TO RUN APPLICATION
 
 ### CAUTION: YOU MUST HAVE NODE INSTALLED ON YOUR MACHINE. WITHOUT IT, YOU CANNOT RUN THE JS FILE AS SPECIFIED BELOW
@@ -106,17 +109,27 @@ Or it can be opened from a link [Postman](https://postman.com).
 
 After Postman is opened, you can press the button create new as shown in the picture below
 
-
+![Picture 12](https://user-images.githubusercontent.com/76923830/205912005-2ab4f11d-618a-4289-b95f-ffd88c023d77.JPG)
 
 After you press that button a new window will open which will offer you what new project you want to create. You can press the HTTP request button as shown in the picture below
 
-
+![Picture 13](https://user-images.githubusercontent.com/76923830/205912011-3392531f-928b-44b3-a46d-027be4a21929.JPG)
 
 After the button for a new HTTP request is pressed, you are gonna be greeted with this display
 
-
+![Picture 14](https://user-images.githubusercontent.com/76923830/205912017-012529e7-d8d6-45dc-85f9-9c297709b797.JPG)
 
 ### NOTE: Your app.js must be running
 ---------------------------------------------------
 After you ensure that your app.js is running, you can test an api. In this picture for example the api that was tested was ``` localhost:3000/api/posts ``` with the ``` GET ``` request. As you can see there are some results displayed
 
+![Picture 15](https://user-images.githubusercontent.com/76923830/205912023-55afcaf1-8c08-454f-b8a0-93b39b67b835.JPG)
+
+
+# ERRORS AND FUNCTIONS THAT DO NOT WORK/HAVE FALSE RESULTS
+
+In full honesty, the application required of me was developed, however there are functions that are missing, that I have not been able to add or did not have the time to add successfully. These are the following
+
+### POST/PUT methods: The POST and PUT methods can be requested by Postman without errors, however no matter what is inserted as a new data, the postman processes it as empty
+
+### DOCUMENTATION: The documentation for the application development is missing. I did not have time to fully implement this due to all the testing I had to do in order to ensure that the majority of the application is working.
