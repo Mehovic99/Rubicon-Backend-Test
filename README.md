@@ -86,10 +86,12 @@ In the repository, you can notice that there is a folder called database. It is 
 
 This sql file contains the entire database with its corresponding example data. You can copy all of the text by pressing ``` Ctrl + A ``` which will then select all the lines of code from the sql file. The sql file is one large query that after you copy it, you can go to PhpMyAdmin and select the section called ``` SQL ```
 
-
+![Picture 7](https://user-images.githubusercontent.com/76923830/205908927-a378d9cd-b270-4313-81b7-bb0e9ece4aad.JPG)
 
 After you click on the SQL tab, you insert the data into the query box
 
-
+![Picture 8](https://user-images.githubusercontent.com/76923830/205908931-ba132817-6996-4d89-9692-98a32430ef4a.JPG)
 
 After you press the button that starts the query, you will have a new database one the left hand side and a confirmation that the database was created.
+
+![Picture 9](https://user-images.githubusercontent.com/76923830/205908936-2e4e4e24-24eb-4f8f-9d87-fa872ba9b67c.JPG)
