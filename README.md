@@ -103,3 +103,20 @@ After you have enabled the database and tested to see if the application can run
 ![Picture 10](https://user-images.githubusercontent.com/76923830/205910324-d3951a11-8c92-456e-8b6c-971c2e62c959.JPG)
 
 Or it can be opened from a link [Postman](https://postman.com).
+
+After Postman is opened, you can press the button create new as shown in the picture below
+
+
+
+After you press that button a new window will open which will offer you what new project you want to create. You can press the HTTP request button as shown in the picture below
+
+
+
+After the button for a new HTTP request is pressed, you are gonna be greeted with this display
+
+
+
+### NOTE: Your app.js must be running
+---------------------------------------------------
+After you ensure that your app.js is running, you can test an api. In this picture for example the api that was tested was ``` localhost:3000/api/posts ``` with the ``` GET ``` request. As you can see there are some results displayed
+
