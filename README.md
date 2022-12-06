@@ -45,4 +45,9 @@ Once you have the cloned repository in your prefered ID. You can run the applica
 
 You can open a new terminal in visual studio code and type in ``` node app.js ```
 
+![Picture 3](https://user-images.githubusercontent.com/76923830/205900803-d0be475f-b13a-4746-acbf-be6553f83457.png)
+![Picture 4](https://user-images.githubusercontent.com/76923830/205900827-8f3a981f-43a9-44dc-b0af-4fee2d89f68c.JPG)
 
+### OPTION 2: If you're using IDE that does not have an integrated terminal
+
+You can open Command Prompt on Windows (cmd) or A linux terminal on your Linux machine (Ctrl+Alt+T) in order to run the program. First you must navigate to your cloned repository folder
