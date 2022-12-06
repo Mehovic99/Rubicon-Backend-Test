@@ -47,9 +47,15 @@ db.connect((err) => {
   console.log('Database connection successful');
 });
 
-//Testing database connection. Remove the '//' symbols from this command line in order to test whether the sql connection is successful
-//sql = 'SELECT * FROM posts';
-//let query = db.query(sql, (err, result) =>{
-  //if(err) throw err;
-  //console.log(result);
-//});
+//API SECTION
+
+//Get all blog posts
+app.get('/api/posts', (req, res)=>{
+  let sql = 'SELECT * FROM posts';
+  db.query(sql, (err, results)=>{
+    if(err){
+      return res.status(500).json(err);
+    }
+    res.status(200).json(results);
+  });
+});
